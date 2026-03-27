@@ -1,0 +1,192 @@
+/* --- GIẤY & GHIBLI THEME VARIABLES --- */
+:root {
+    --bg-paper: #fbf8f4;
+    --text-ink: #1f1b18;
+    --text-light: #5c524b;
+    --color-leaf: #698358;
+    --color-leaf-hover: #526844;
+    --color-sun: #dd9c3c;
+    --color-magic: #b56c80;
+    --card-paper: #fffcf8;
+    --border-ink: rgba(60, 53, 48, 0.15);
+    --border-strong: rgba(60, 53, 48, 0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-paper);
+    color: var(--text-ink);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.08rem; /* Font nhỉnh nét tròn dễ đọc */
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+/* Paper Texture */
+.paper-texture {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: -1; opacity: 0.25;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+}
+
+/* Mở rộng Container cho Cinematic Vibe */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.mt-2 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 3rem; }
+.mb-2 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 3rem; }
+.text-center { text-align: center; }
+
+h1, h2, h3, .title-serif, .serif-sub { font-family: 'Philosopher', sans-serif; color: #2b2521; }
+.handwrite-text { font-family: 'Kalam', cursive; color: var(--color-sun); font-size: 1.4em; font-weight: 700; }
+.section-title { font-size: 3rem; line-height: 1.15; margin-bottom: 15px; } /* Giảm scale giúp 1 dòng ko bị ngắt */
+.section-subtitle { font-size: 1.25rem; color: var(--text-light); max-width: 750px; margin: 0 auto 50px; }
+
+/* Navbar */
+.navbar { padding: 24px 0; position: fixed; width: 100%; top:0; z-index: 100; transition: background 0.3s ease; }
+.nav-wrap { display: flex; justify-content: space-between; align-items: center; }
+.logo-handwritten { font-family: 'Kalam', cursive; font-size: 2.5rem; color: var(--text-ink); text-decoration: none; font-weight: bold; }
+.sparkle { color: var(--color-sun); }
+.nav-links a { text-decoration: none; color: var(--text-ink); font-size: 1.1rem; font-weight: 600; margin-right: 24px; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom:-4px; left:0; width: 0; height: 2px; background: var(--color-leaf); transition: width 0.3s ease; }
+.nav-links a:hover::after { width: 100%; }
+.btn-stamp { background: transparent; border: 2px solid var(--text-ink); padding: 8px 24px; font-family: 'Quicksand', sans-serif; font-weight: bold; color: var(--text-ink); text-decoration: none; border-radius: 4px; transition: all 0.2s; }
+.btn-stamp:hover { background: var(--text-ink); color: var(--bg-paper); transform: rotate(-2deg); }
+
+/* Block Base */
+section, footer { padding: 120px 0; }
+.dark-bg { background-color: rgba(224, 214, 200, 0.4); border-top: 1px dashed var(--border-strong); border-bottom: 1px dashed var(--border-strong); }
+
+/* Common Structural */
+.dual-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 0 40px; }
+.dual-panel.align-start { align-items: flex-start; }
+.ink-list { list-style: none; }
+.ink-list li { position: relative; padding-left: 30px; margin-bottom: 16px; font-size: 1.15rem; }
+.ink-list li::before { content: '★'; position: absolute; left: 0; color: var(--color-sun); font-size: 1.2rem; }
+.quote-card { background: var(--card-paper); padding: 24px; border-left: 4px solid var(--color-magic); font-style: italic; color: var(--text-light); border-radius: 4px; }
+.text-highlight { color: var(--color-leaf-hover); font-size: 1.15rem; }
+
+/* Art Containers Shared */
+.gsap-parallax-img { overflow: hidden; border-radius: 12px; position: relative; aspect-ratio: 16/9; width: 100%; max-width: none; margin: 0 auto; border: 4px solid var(--text-ink); box-shadow: 12px 12px 0 rgba(60, 53, 48, 0.1); background: rgba(232, 222, 206, 0.5); transition: transform 0.5s ease; }
+.gsap-parallax-img:hover { transform: scale(1.01) rotate(0.5deg); }
+.gsap-parallax-img img, .gsap-parallax-img video { width: 100%; height: 100%; display: block; object-fit: cover; border-radius: 0; border: none; box-shadow: none !important; margin: 0; padding: 0; }
+
+/* Fixing Specific Containers for Video Skeleton load */
+.hero-art { aspect-ratio: 16/9; width: 100%; max-width: none; margin: 0 auto; position: relative; overflow: hidden; border-radius: 12px; border: 4px solid var(--text-ink); box-shadow: 12px 12px 0 rgba(60, 53, 48, 0.1); background: rgba(232, 222, 206, 0.5); transition: transform 0.5s ease; }
+.hero-art:hover { transform: scale(1.01) rotate(0.5deg); }
+.hero-art video { width: 100%; height: 100%; object-fit: cover; display: block; border: none; }
+
+/* Hero */
+.hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.hero-text .title-serif { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+.hero-text .subtitle { font-size: 1.25rem; color: var(--text-light); max-width: 90%; }
+.stats-badge { display: inline-block; background: rgba(221, 156, 60, 0.15); color: var(--text-ink); padding: 6px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 700; margin-bottom: 20px; border: 1px dashed var(--color-sun); }
+.btn-primary { display: inline-block; background-color: var(--color-leaf); color: white; padding: 16px 36px; border-radius: 30px; text-decoration: none; font-size: 1.1rem; font-weight: bold; box-shadow: 0 10px 20px rgba(105, 131, 88, 0.2); transition: transform 0.3s, background 0.3s; }
+.btn-primary:hover { background-color: var(--color-leaf-hover); transform: translateY(-3px); }
+.hero-art { position: relative; }
+.floating-pet { position: absolute; font-size: 2.5rem; animation: floating 4s ease-in-out infinite; filter: drop-shadow(0 4px 6px rgba(221, 156, 60, 0.5)); }
+.pet-1 { top: -20px; left: -20px; animation-duration: 3s; }
+.pet-2 { bottom: 20px; right: -30px; animation-duration: 5s; animation-delay: 1s; }
+@keyframes floating { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+
+/* === Pain Cards (Story) TÁI CẤU TRÚC: Phễu === */
+.pain-visual-center { aspect-ratio: 16/9; width: 100%; max-height: 550px; border-radius: 12px; overflow: hidden; border: 4px solid var(--text-ink); box-shadow: 12px 12px 0 rgba(60, 53, 48, 0.1); background: rgba(232, 222, 206, 0.5); position: relative; margin-bottom: 2rem; }
+.pain-visual-center video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.story-item.style-card { display: flex; flex-direction: column; align-items: center; text-align: center; background: var(--card-paper); border: 2px dashed var(--border-strong); padding: 40px 30px; border-radius: 12px; box-shadow: none; transition: transform 0.3s ease; }
+.story-item.style-card:hover { transform: translateY(-5px); box-shadow: 8px 8px 0 var(--border-strong); }
+.sketch-icon { font-size: 3.5rem; margin-bottom: 15px; }
+.story-item h3 { font-size: 1.5rem; margin-bottom: 10px; }
+
+/* === Trap Section MỞ RỘNG (Edge-to-Edge) === */
+.full-bg-trap { position: relative; padding: 160px 0; background-size: cover; background-position: center; background-attachment: fixed; }
+.trap-box { max-width: 750px; margin: 0 auto; background: rgba(251, 248, 244, 0.95); padding: 50px; border-radius: 12px; text-align: center; border: 2px dashed var(--border-ink); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.trap-box .quote-card { border-left: none; border-top: 4px solid var(--color-magic); background: #fff; }
+
+/* Khối 6 Tinh Linh */
+.agents-section { background: rgba(232, 222, 206, 0.1); padding-bottom: 0; }
+.agent-row { min-height: 100vh; padding: 100px 0; display: flex; align-items: center; border-top: 1px solid var(--border-ink); box-shadow: 0 -20px 40px rgba(0,0,0,0.05); overflow: hidden; background: var(--bg-paper); transform-origin: top center; z-index: 1; position: relative; }
+.agent-row:nth-child(odd) { background: #fffcf8; }
+.agent-container { display: flex; align-items: center; gap: 80px; width: 100%; padding: 0 40px; }
+.agent-row.reverse .agent-container { flex-direction: row-reverse; }
+
+.agent-visual { flex: 1; overflow: hidden; border-radius: 12px; position: relative; width: 100%; }
+.agent-content { flex: 1; padding: 0 20px; }
+.agent-content .title-serif { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.3; }
+.agent-content p { font-size: 1.15rem; color: var(--text-light); }
+.agent-content .agent-number { font-size: 6rem; margin-bottom: -20px; font-family: 'Kalam', cursive; color: var(--border-ink); opacity: 0.25; }
+
+/* Openclaw Cập nhật Khoảng tối mịt */
+.openclaw-section { padding-top: 150px; padding-bottom: 150px; background: #262c26; color: rgba(255,255,255,0.85); }
+.openclaw-section h2.title-serif, .openclaw-section .section-title { color: #fff; text-align: left; }
+.openclaw-section .warning-box { background: rgba(255, 107, 129, 0.15); border: 1px dashed #ff6b81; color: #ffebf0; }
+.openclaw-section .warning-box p { color: #ffebf0; }
+
+/* === Philosophy Khung kính (Glassmorphism) === */
+.full-bg-philosophy { padding: 180px 0; background-size: cover; background-position: center; background-attachment: fixed; }
+.philosophy-glass-box { max-width: 850px; margin: 0 auto; background: rgba(31, 27, 24, 0.7); backdrop-filter: blur(15px); padding: 60px 50px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15); color: #fff; box-shadow: 0 40px 60px rgba(0,0,0,0.3); }
+.white-list li { color: #fff; margin-bottom: 20px; font-size: 1.2rem; }
+.white-list li::before { color: #ffeaa7; }
+
+/* Footer */
+.footer-paper { background-color: var(--text-ink); color: var(--bg-paper); }
+.footer-paper .title-serif { color: #fff; }
+.wax-form { display: flex; justify-content: center; max-width: 600px; margin: 30px auto 0; gap: 12px; }
+.wax-form input { flex: 1; padding: 16px 24px; font-size: 1.1rem; border: none; border-radius: 30px; background: var(--card-paper); font-family: inherit; color: var(--text-ink); }
+.stamp-button { background-color: var(--color-magic); color: white; border: none; padding: 0 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+.stamp-button:hover { background-color: #a05a6d; }
+.copyright { font-size: 0.9rem; color: #888; }
+
+/* Delay Classes for Stagger */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .container { max-width: 900px; }
+    .hero-grid, .dual-panel { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+    .story-grid { grid-template-columns: 1fr; }
+    .agent-container, .agent-row.reverse .agent-container { flex-direction: column; grid-template-columns: 1fr; text-align: center; gap: 40px; }
+    .nav-links { display: none; }
+    .ink-list li { text-align: left; }
+    .full-bg-trap, .full-bg-philosophy { background-attachment: scroll; /* Disable parallax bg on mobile */ padding: 80px 0; }
+}
+
+/* UI COMPONENTS SÁCH PHÉP (SPELLBOOK & TIMELINE) */
+.magical-chat-timeline { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; font-family: 'Quicksand', sans-serif;}
+.chat-bubble { padding: 15px 20px; border-radius: 12px; font-size: 1.1rem; max-width: 85%; position: relative; box-shadow: 4px 4px 0 rgba(60, 53, 48, 0.05); }
+.user-bubble { background: #fffcf8; border: 1px solid var(--border-ink); align-self: flex-start; border-bottom-left-radius: 0; }
+.agent-bubble { background: rgba(232, 222, 206, 0.5); border: 2px dashed var(--color-magic); align-self: flex-end; border-bottom-right-radius: 0; color: var(--text-ink); }
+.agent-bubble.fox { border-color: #d35400; }
+.agent-bubble.dwarf { border-color: #27ae60; background: #f4fbf6; }
+.agent-bubble.final-bubble { background: #fff3e0; border: 2px solid #d35400; font-weight: bold; }
+
+.agent-spellbook { margin-top: 30px; padding-top: 25px; border-top: 1px dashed rgba(60, 53, 48, 0.2); }
+.agent-spellbook-title { font-family: 'Kalam', cursive; font-size: 1.4rem; color: var(--text-ink); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+.agent-spellbook .ink-list li { margin-bottom: 12px; font-size: 1.05rem; }
+
+/* Magic Metrics Row */
+.magic-metrics-section { padding: 80px 0; border-top: 2px dashed rgba(60, 53, 48, 0.1); border-bottom: 2px dashed rgba(60, 53, 48, 0.1); background: var(--bg-paper); position: relative; z-index: 2; }
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.metric-card { text-align: center; border: 4px solid var(--text-ink); padding: 40px 20px; border-radius: 16px; background: rgba(255,255,255,0.7); box-shadow: 8px 8px 0 rgba(60, 53, 48, 0.1); }
+.metric-number { font-family: 'Title Serif', serif; font-size: 4rem; color: #c0392b; margin-bottom: 10px; line-height: 1; }
+.metric-label { font-family: 'Kalam', cursive; font-size: 1.5rem; color: var(--text-ink); }
+@media (max-width: 768px) {
+    .wax-form { flex-direction: column; }
+    .stamp-button { padding: 16px; justify-content: center; }
+    .section-title { font-size: 2.2rem; }
+    .hero-text .title-serif { font-size: 2.5rem;}
+    
+    /* Responsive cho các Component mới */
+    .metrics-grid { grid-template-columns: 1fr; gap: 20px; }
+    .openclaw-section .section-title { text-align: center; }
+    .magical-chat-timeline { padding: 0 10px; }
+    .chat-bubble { max-width: 95%; font-size: 1rem; padding: 12px 15px; }
+    .agent-row { padding: 60px 0; }
+    .agent-content .agent-number { font-size: 4rem; }
+}

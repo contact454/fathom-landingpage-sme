@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathom - Phép Màu Bán Lẻ</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+</head>
+<body>
+    <div class="paper-texture"></div>
+
+    <nav class="navbar">
+        <div class="container nav-wrap">
+            <a href="#" class="logo-handwritten">Fathom<span class="sparkle">✧</span></a>
+            <div class="nav-links">
+                <a href="#story">Thực trạng</a>
+                <a href="#chatbot-trap">Bẫy Chatbot</a>
+                <a href="#magic-agents">6 Tinh Linh AI</a>
+                <a href="#openclaw">Bảo mật Openclaw</a>
+                <a href="#philosophy">Triết lý</a>
+            </div>
+            <a href="#letter" class="btn-stamp">Nhận Thư Tư Vấn</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text gsap-hero-stagger">
+                <p class="stats-badge">Giải Pháp Nhân Sự AI Cao Cấp Dành Cho Doanh Nghiệp Bán Lẻ</p>
+                <h1 class="title-serif">Kỷ Nguyên Tự Động Hóa: <br>Đánh thức <span class="handwrite-text">6 Đặc Vụ AI</span></h1>
+                <p class="subtitle">Không còn nỗi lo bỏ lỡ tin nhắn lúc 2h sáng hay khủng hoảng nhân sự khi vào cao điểm Sale. Fathom mang đến đội ngũ 6 Đặc Vụ AI thông minh tự động tư vấn, kiểm kho, chăm sóc khách cũ và phân tích dữ liệu 24/7. Giải phóng quỹ thời gian để bạn tập trung cao nhất vào chiến lược mở rộng kinh doanh.</p>
+                <div class="cta-group mt-2">
+                    <a href="#magic-agents" class="btn-primary">Khai Phóng Cửa Hàng Ngay</a>
+                </div>
+            </div>
+            <div class="hero-art-wrapper gsap-hero-image" style="position: relative;">
+                <div class="hero-art">
+                    <video autoplay loop muted playsinline>
+                        <source src="hero.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="floating-pet pet-1" style="position: absolute; top:-20px; left:-20px;">✨</div>
+                <div class="floating-pet pet-2" style="position: absolute; bottom:20px; right:-20px;">✨</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: Pain Points (Nới lỏng Cấu trúc Phễu Center) -->
+    <section id="story" class="pain-section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section-title gsap-fade-up">Dòng Tiền Đang Âm Thầm Bốc Hơi Ở Đâu?</h2>
+                <p class="section-subtitle gsap-fade-up">Doanh thu của bạn bị rò rỉ mỗi ngày qua những lỗ hổng vận hành thủ công mà sức người khó lòng kiểm soát hết.</p>
+            </div>
+            
+            <div class="pain-visual-center gsap-fade-up">
+                <video autoplay loop muted playsinline class="hand-drawn-border">
+                    <source src="painpoints.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="story-grid mt-4">
+                <div class="story-item style-card gsap-fade-up">
+                    <div class="sketch-icon">🌑</div>
+                    <h3 class="title-serif">Mất Khách Vì Rep Chậm</h3>
+                    <p>Khách hàng nhấp vào Quảng cáo hỏi mua lúc 12h đêm. Sáng hôm sau ca trực mở mắt trả lời tin nhắn thì khách đã mua chốt đơn ở đối thủ. Tiền Ads đổ sông đổ bể.</p>
+                </div>
+                <div class="story-item style-card gsap-fade-up delay-1">
+                    <div class="sketch-icon">📦</div>
+                    <h3 class="title-serif">Tồn Kho Đóng Băng Dòng Vốn</h3>
+                    <p>Hàng ngàn mã sản phẩm bị chôn vùi trong báo cáo excel. Thiếu chủ động truy quét hàng tồn khiến doanh nghiệp bỏ lỡ thời điểm Vàng chạy xả kho xoay vòng vốn.</p>
+                </div>
+                <div class="story-item style-card gsap-fade-up delay-2">
+                    <div class="sketch-icon">🍃</div>
+                    <h3 class="title-serif">Khủng Hoảng Phụ Thuộc Personnel</h3>
+                    <p>Nhân viên Sale cứng nghỉ việc kéo theo toàn bộ phương pháp xử lý khách hàng VIP. Vòng lặp tuyển dụng và On-boarding lại một người mới cực kỳ tốn chi phí và rủi ro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Chatbot Trap (Full-width Edge to Edge Parallax) -->
+    <section id="chatbot-trap" class="trap-section full-bg-trap" style="position: relative; overflow: hidden; z-index: 1;">
+        <!-- Lớp phủ Video Parallax ảo -->
+        <div class="chatbot-visual" style="position: absolute; top: -15%; left: 0; width: 100%; height: 130%; z-index: 0;">
+            <video autoplay loop muted playsinline class="bg-video-scrub" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45);">
+                <source src="chatbot.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- Lớp Gradient Mask chìm -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(43, 37, 33, 0.4), rgba(43, 37, 33, 0.6)); z-index: 1; pointer-events: none;"></div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="trap-box center-focus gsap-fade-up">
+                <h2 class="title-serif" style="font-size: 3rem; color: #2b2521;">Mua Chatbot Kịch Bản là Xong?<br><span class="handwrite-text" style="color: #c0392b; font-size: 1.8rem;">Đó là sai lầm lãng phí!</span></h2>
+                <p class="mt-2 text-highlight" style="font-size: 1.25rem;"><strong>Lợi thế của Fathom không nằm ở một con Chatbot trả lời đơn lập rập khuôn, mà nằm ở sức mạnh Đa AI Tương Tác Hợp Lực:</strong></p>
+                <div class="magical-chat-timeline">
+                    <div class="chat-bubble user-bubble">🌙 Khách VIP (Lúc 2h sáng): "Dạ shop ơi, chị cần thêm 1 chiếc váy nhung đen size M gửi đi Quận 2 vào sáng mai luôn rước tiệc, shop check giùm chị với ạ."</div>
+                    <div class="chat-bubble agent-bubble fox">🦊 Đặc Vụ CSKH gọi API ngầm: "@Đặc Vụ Kho, truy soát gấp mã Váy Nhung Đen M ở kho HCM còn hàng nguyên seal không?"</div>
+                    <div class="chat-bubble agent-bubble dwarf">🧝🏼‍♂️ Đặc Vụ Kho Hàng tự mở KiotViet: "Data trả về: Còn đúng 1 chiếc mác ở chi nhánh Nguyễn Trãi. Tôi sẽ tự gạch tồn kho bảo lưu và tạo lệnh chờ đóng gói luôn lúc 2h sáng."</div>
+                    <div class="chat-bubble agent-bubble fox final-bubble">🦊 Đặc Vụ CSKH phản hồi tức thì: "Dạ váy đen M chị cần tụi em vẫn giữ cẩn thận ở kho Nguyễn Trãi ạ. Đơn của chị đã được tạo tự động và đúng 9h sáng Shipper sẽ giao hỏa tốc đến cửa nhé. Chúc chị ngủ ngon!"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Detailed 6 AI Agents Z-Pattern (Rộng Thêm 100px) -->
+    <section id="magic-agents" class="agents-section">
+        <div class="container" style="padding-top: 100px; margin-bottom: -50px;">
+            <h2 class="section-title text-center gsap-fade-up">Gặp Gỡ 6 Mảnh Ghép <br><span class="handwrite-text">Của Kỷ Nguyên Autonomous</span></h2>
+            <p class="section-subtitle text-center gsap-fade-up">Mỗi linh vật cai quản một thánh địa riêng, nhưng tất thảy đều hợp nhất bộ nhớ chung vào "Lõi Trí Tuệ" (Single Source of Truth) của cửa hàng.</p>
+        </div>
+
+        <div class="agent-row">
+            <div class="container agent-container">
+                <div class="agent-visual gsap-parallax-img">
+                    <video autoplay loop muted playsinline class="hand-drawn-border">
+                        <source src="agent1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="agent-content gsap-fade-up">
+                    <div class="agent-number">01</div>
+                    <h3 class="title-serif">Đào Tạo Của Doanh Nghiệp <br><span class="handwrite-text">(Knowledge Agent)</span></h3>
+                    <p>Thay vì tốn ròng rã 2 tuần cực nhọc để dạy cho một nhân sự mới phải thuộc lòng hàng trăm trang tài liệu (PDF, Word, Ảnh). Đặc vụ cực kỳ ưu tú này sẽ tự động đọc hiểu toàn bộ kho lưu trữ file luật lệ, chính sách đổi trả của Công ty chỉ trong 30 giây để trở thành một Chuyên gia Cấp cao.</p>
+                    <div class="agent-spellbook">
+                        <h4 class="agent-spellbook-title">📜 Quy Đổi Sự Tiết Kiệm:</h4>
+                        <ul class="ink-list">
+                            <li><strong>Vector Hóa Tốc Hành:</strong> Tiếp thu 50 file Catalog thông tin sản phẩm trong chưa đến nửa phút. Trực tiếp cắt giảm ngân sách "On-boarding" mệt nhoài cho nhân sự xoay vòng.</li>
+                            <li><strong>Tính Chính Xác Không Sai Lệch:</strong> Tự động Update giá bán mới theo thời gian thực. Loại bỏ 100% rủi ro tư vấn sai chính sách khiến cửa hàng phải bỏ chênh lệch xuất bù đền tiền.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="agent-row reverse">
+            <div class="container agent-container">
+                <div class="agent-content gsap-fade-up">
+                    <div class="agent-number">02</div>
+                    <h3 class="title-serif">Tiếp Tân Đa Nền Tảng <br><span class="handwrite-text">(Customer Agent)</span></h3>
+                    <p>Luôn túc trực 24/7 đón lỏng khách hàng ở mọi ngã rẽ truyền thông (Zalo, Fanpage, Insta) bằng thái độ chuyên nghiệp hoàn hảo. Đặc vụ này không chỉ trả lời như vẹt, nó được tích hợp công năng phân tích tâm lý người thật qua từng dấu chấm phẩy văn bản.</p>
+                    <div class="agent-spellbook">
+                        <h4 class="agent-spellbook-title">📜 Quy Đổi Lợi Nhuận:</h4>
+                        <ul class="ink-list">
+                            <li><strong>Phân Tích Tâm Lý (Sentiment Analysis):</strong> Đo đạc thấy khách đang vui và dễ dãi? Nảy số khéo léo đề xuất Chốt Sale mua kèm (Upsell) giúp cải thiện biên độ AOV cho đơn hàng.</li>
+                            <li><strong>Chuông Báo Cháy Khủng Hoảng:</strong> Đọc vị được khách đang cáu gắt phàn nàn? Ngay lập tức dịu giọng nhún nhường xin lỗi và nhả "Emergency Ping" đinh tai gửi liên kết chat sang tài khoản cấp Quản lý để xử lý.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="agent-visual gsap-parallax-img">
+                    <video autoplay loop muted playsinline class="hand-drawn-border">
+                        <source src="agent2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="agent-row">
+            <div class="container agent-container">
+                <div class="agent-visual gsap-parallax-img">
+                    <video autoplay loop muted playsinline class="hand-drawn-border">
+                        <source src="agent3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="agent-content gsap-fade-up">
+                    <div class="agent-number">03</div>
+                    <h3 class="title-serif">Quản Trị Tồn Kho Thực <br><span class="handwrite-text">(Inventory Agent)</span></h3>
+                    <p>Kết liễu cảnh nhức đầu với hệ thống File Excel đối soát khổng lồ không khớp. Nó âm thầm cắm sâu cổng kết nối API vào gốc rễ KiotViet, Sapo hay Haravan của bạn để liên tục đọc hiểu tồn kho luân chuyển từng giây để trực tiếp phản hồi trạng thái mã hàng ở bất kì lúc nào.</p>
+                    <div class="agent-spellbook">
+                        <h4 class="agent-spellbook-title">📜 Ngăn Rò Rỉ Tài Chính:</h4>
+                        <ul class="ink-list">
+                            <li><strong>Đồng Bộ Hóa Xuyên Tường:</strong> Khách nhắn Zalo hỏi hàng? Đặc vụ gọi xuống KiotViet check và dặn luôn khách: "Dạ váy đen M ở chi nhánh A vừa hết nhưng chi nhánh B cách đó 2km vẫn còn đủ cho chị nhé".</li>
+                            <li><strong>Giải Cứu Dòng Tiền Âm:</strong> Tự động truy quét toàn kho "Những mã hàng dính bụi 60 ngày không nhúc nhích". Phát tín hiệu đề xuất kịch bản xả Sale thu hồi vốn ngay trong tíc tắc rành mạch cho Chủ tiệm.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="agent-row reverse">
+            <div class="container agent-container">
+                <div class="agent-content gsap-fade-up">
+                    <div class="agent-number">04</div>
+                    <h3 class="title-serif">Kiến Tạo Content Đa Dạng <br><span class="handwrite-text">(Creative Agent)</span></h3>
+                    <p>Giành lại quyền tự quyết thay vì phải đốt hầu bao hàng ngàn Đô la cho khâu thầu Agency quảng cáo mỗi quý. Không bao giờ cạn kiệt ý tưởng, bạn chỉ cần ném đại cho Nó một tấm hình mộc chụp sản phẩm góc vuông, Nó sẽ thiết kế nguyên một dàn âm sắc cho nội dung theo hướng bài bản nhất.</p>
+                    <div class="agent-spellbook">
+                        <h4 class="agent-spellbook-title">📜 Quy Đổi Sự Tiết Kiệm:</h4>
+                        <ul class="ink-list">
+                            <li><strong>A/B Testing Trên Diện Rộng:</strong> Từ 1 ảnh thô ráp -> tự nhân bản ra 50 mẫu Văn bản đăng với đủ tông giọng khác nhau (Sang trọng mềm mại, Ép giá khẩn cấp Sale cuối tuần).</li>
+                            <li><strong>Mỏ Leo Lên Tự Động Hành Toàn Phần:</strong> Tự động phân cấp đẩy Lịch dải Post Facebook dày đặc 30 ngày/Tháng. Không còn nỗi lo Fanpage bay nhạt nội dung do đứt quãng đăng tải nhân sự Content chểnh mảng.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="agent-visual gsap-parallax-img">
+                    <video autoplay loop muted playsinline class="hand-drawn-border">
+                        <source src="agent4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="agent-row">
+            <div class="container agent-container">
+                <div class="agent-visual gsap-parallax-img">
+                    <video autoplay loop muted playsinline class="hand-drawn-border">
+                        <source src="agent5.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="agent-content gsap-fade-up">
+                    <div class="agent-number">05</div>
+                    <h3 class="title-serif">Chuyên Viên Khai Phá Số Liệu <br><span class="handwrite-text">(Analytics Agent)</span></h3>
+                    <p>Sở hữu một cá nhân "Data Analyst $1500 Cấp Cao" phục vụ tư duy Độc quyền cho Sếp. Nó thu gom mớ sổ sách mệt mỏi, các thông số rác thừa không nhồi nhét để bẻ chiết ra đúng cái "Sự Cố Kinh Doanh Cốt Lõi" mà Cửa hàng anh chị đang gặp phải.</p>
+                    <div class="agent-spellbook">
+                        <h4 class="agent-spellbook-title">📜 Năng Lực Trực Quan Hóa:</h4>
+                        <ul class="ink-list">
+                            <li><strong>Phát Hiện Điểm Yếu Nút Thắt (Anomaly Detection):</strong> Báo cáo cảnh báo sắc lẹm lên Zalo cá nhân: "Tại sao nhóm khách Gen Z mua tuột mất doanh số 40% ở Kho B trong nửa tháng nay?".</li>
+                            <li><strong>Đúng 6H30 Sáng Chuẩn Mực:</strong> Tự động hệ thống hóa biểu đồ sức khỏe P&L Lợi nhuận và gửi qua Tin nhắn cho CEO ngay trong lúc anh chị còn nhâm nhi ly Cafe trước thời gian điều hành 8H chuẩn.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="agent-row reverse">
+            <div class="container agent-container">
+                <div class="agent-content gsap-fade-up">
+                    <div class="agent-number">06</div>
+                    <h3 class="title-serif">Hồi Sinh Vòng Đời Khách Cũ <br><span class="handwrite-text">(Loyalty Agent)</span></h3>
+                    <p>Đốt tiền ngân sách Quảng cáo Facebook để lùng mua cho ra Khách hàng mới ở thời kỳ này là con dao hai lưỡi. Trong khi Lợi nhuận béo bở nhất nằm ở việc khơi nguồn lại data khách quen - những người đã bỏ không ghé thăm bạn suốt mấy tháng liền!</p>
+                    <div class="agent-spellbook">
+                        <h4 class="agent-spellbook-title">📜 Tối Ưu Lực Lượng Vốn 0Đ:</h4>
+                        <ul class="ink-list">
+                            <li><strong>Kích Cầu Khách Lặn Khác (LTV Focus):</strong> App dụng thuật toán tính năng RFM truy vấn tệp Người dùng quá nguội 1 năm, tự sinh thư ZNS chúc mừng sinh nhật đính ghim Voucher riêng biệt ân sủng.</li>
+                            <li><strong>Mang Lại Biên Độ Tiền Thuần:</strong> Hỗ trợ gia tăng thụ động thêm ròng doanh thu mua cất tủ thứ cấp (Win-back Purchase) mà không phung phí mất lấy bất kỳ 1 Cắc lẻ nào cho Agency Ads.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="agent-visual gsap-parallax-img">
+                    <video autoplay loop muted playsinline class="hand-drawn-border">
+                        <source src="agent6.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION MỚI: Trục Lợi Nhuận (ROI Metrics) -->
+    <section class="magic-metrics-section">
+        <div class="container relative z-index-2">
+            <h2 class="title-serif text-center mb-4" style="font-size: 3.2rem; color: #c0392b;">Biên Niên Sử Thực Tế Triển Khai</h2>
+            <p class="text-center mb-4" style="font-family:'Kalam'; font-size:1.5rem;">Cam kết số hóa sự khác biệt ngay vào tỷ lệ % trong Báo Cáo của bạn</p>
+            <div class="metrics-grid mt-4">
+                <div class="metric-card gsap-fade-up">
+                    <div class="metric-number">0.2s</div>
+                    <div class="metric-label">Tốc Độ Đáo Trả Phễu Khách</div>
+                    <p class="mt-2" style="font-size: 1rem; color: var(--text-light);">Bắt trọn khoảnh khắc vàng khách đang quyết tâm đòi xuống thẻ mà không bắt họ phải cắn móng tay đợi "Ca trực giờ Hành Chính".</p>
+                </div>
+                <div class="metric-card gsap-fade-up delay-1">
+                    <div class="metric-number">0%</div>
+                    <div class="metric-label">Sai Lệch Nội Bộ Công Ty</div>
+                    <p class="mt-2" style="font-size: 1rem; color: var(--text-light);">Hiểu triệt để file luật lệ PDF đính kèm. Khóa chặn 100% tình huống nhân sự mống lóng ngóng Rep nhầm giá bán hay Chính sách Đổi sỉ Lỗ Vốn.</p>
+                </div>
+                <div class="metric-card gsap-fade-up delay-2">
+                    <div class="metric-number">90%</div>
+                    <div class="metric-label">Thời Gian Tỉnh Thức Khôi Phục</div>
+                    <p class="mt-2" style="font-size: 1rem; color: var(--text-light);">Thoát ly hẳn quy trình ngồi đút miếng tay và chằn chọc đào tạo Newbie, hoàn năng quỹ sáng tạo Tầm Nhìn Chiến Lược Quản Lý Tổng Thể Cơ Nghề.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Openclaw Infrastructure (Dark Mode Tách Biệt) -->
+    <section id="openclaw" class="openclaw-section">
+        <div class="container dual-panel">
+            <div class="oc-wrap">
+                <div class="oc-art gsap-parallax-img" style="border-color: rgba(255,255,255,0.2);">
+                    <video autoplay loop muted playsinline>
+                        <source src="openclaw.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="text-center mt-2" style="font-family:'Kalam';font-size:1.5rem; opacity:0.6;">Tài Sản Bí Quyết Mãi Mãi Bất Khả Xâm Phạm</p>
+            </div>
+            <div class="oc-desc gsap-fade-up">
+                <h2 class="section-title" style="text-align: left;">Bảo Mật B2B Lõi Thép<br><span class="handwrite-text" style="font-size: 2.2rem; color: #f5b041;">Hệ Thống Tường Lửa Tự Tôn Openclaw</span></h2>
+                <div class="warning-box mt-4">
+                    <p><strong>⚠️ Trú Ản Thế Lực Nuốt Vạ Miệng:</strong> Vứt AI miễn phí công cộng lên Website sẽ vấp ngay sự cố: Tự cắp thông tin khách đi rải nuôi AI Hãng Bên Thứ Ba đối thủ, tự chế ra lời ảo phản dame khách mắng mỏ sỉ vả Thượng Đế làm phốt rùm beng sập Chuỗi.</p>
+                </div>
+                <p class="mt-4" style="font-size: 1.15rem;">Chạy Fathom, Doanh nghiệp của bạn sẽ được an định thông qua chốt khóa cách ly Data Center 3 rào chuẩn khép kín Tuyệt Đối:</p>
+                <ul class="ink-list white-list mt-2">
+                    <li><strong>Triệt Tiêu Ảo Giác Rập Mắt (Zero Hallucination - RAG Guard):</strong> Đặc Vụ cực đoan bị cấm bẻ lái tư duy tào lao. Chỉ được tư vấn xoay đúng Tệp Catalog bạn cấp. Dính câu xoáy sâu không thuộc luật lệ, Nó sẽ dừng chém gió linh tinh tự đánh vô lê chuyển thẳng kết nối cho Con người.</li>
+                    <li><strong>Vá Đứt Bê Tông Bố Cục (Data Air-Gapped Isolate):</strong> Kiến thức kịch bản chốt Sale bí truyền là Xương tủy Cửa hàng bạn. AI tự ngắt khóa biệt lập cục bộ, không lọt 1 mảnh kiến thức nào trào ra màng lưới Cập Nhật Mạng Tổng bên ngoài. Độc quyền riêng bạn.</li>
+                    <li><strong>Gương Phản Chiếu Lỗi Hệ Thống (Audit Trail Tracking):</strong> Nơi thể hiện mọi sao kê từng mét vuông con chữ. Ai ra mệnh lệnh sai, ai setup Token vô lý, toàn bộ được Tracking minh bạch từng dòng Audit, quản lý trút lỗi có căn cứ rõ ràng minh bạch.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Philosophy (Đối xứng Hero) -->
+    <section id="philosophy" class="philosophy-section" style="padding: 120px 0;">
+        <div class="container hero-grid" style="grid-template-columns: 1fr 1fr; gap: 80px;">
+            <div class="philosophy-visual gsap-parallax-img">
+                <video autoplay loop muted playsinline>
+                    <source src="philosophy.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="philosophy-content gsap-fade-up">
+                <p class="handwrite-text mb-2" style="font-size: 1.5rem; color: #c0392b;">Trở Về Nguyên Bản</p>
+                <h2 class="title-serif mb-3">Trao Máy Móc<br>Giữ Trái Tim</h2>
+                <p class="mb-4" style="font-size: 1.25rem;">Giao phó công sức gõ bàn phím rập khuôn cho 6 Tinh Linh Fathom. Đổi lại, anh chị lấy về Bầu Trời Tự Do.</p>
+                
+                <h3 class="handwrite-text" style="font-size: 1.8rem; margin-bottom: 25px; color: var(--text-base);">Bàn Tay Khối Óc Vàng Ngọc Của CEO Dành Cho:</h3>
+                <ul class="ink-list" style="margin-left: 0; padding-left: 0;">
+                    <li>Nhâm nhi tách trà để ngâm ngợi Insight và châm vạch ra chiến lược đường thu đông.</li>
+                    <li>Trực diện đối thoại săn đón ngầm, kết nghĩa huynh đệ với Top 20 khách vãng lai cấp cao.</li>
+                    <li>Bắt nhịp chớp nhoáng các loại xu hướng trào lưu Viral chấn động xứ xở mới nhất.</li>
+                    <li>Thổi ngọn lửa đam mê, rèn giũa tinh thần gươm đao tác chiến cho khối nhân sự kho vận.</li>
+                </ul>
+                <div class="cta-group mt-4">
+                    <a href="#letter" class="btn-primary">Nhận Lịch Phác Thảo AI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="letter" class="footer-paper">
+        <div class="container text-center">
+            <h2 class="title-serif gsap-fade-up">Cởi trói khỏi mớ bòng bong sự vụ <br> Gặt hái ánh sao hoàng kim</h2>
+            <form class="wax-form mt-4 gsap-fade-up">
+                <input type="email" placeholder="Ký gửi con hạc giấy tới địa chỉ hòm thư doanh nghiệp..." required>
+                <button type="submit" class="stamp-button">Lên Lịch Uống Trà</button>
+            </form>
+            <p class="copyright mt-4">Tranh mỹ thuật vẽ từ Lõi tâm hồn AI © 2026. Lập trình bằng hệ sinh thái Agent Studio.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
